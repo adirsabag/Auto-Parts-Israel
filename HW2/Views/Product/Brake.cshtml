@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Brake</title>
+</head>
+<body>
+    <div>
+        <a href='@Url.Action("ProductPage", "Product", new { id = 18 })'>
+            <img src='@Url.Content("~/Uploads/m_brakecalipers.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 19 })'>
+            <img src='@Url.Content("~/Uploads/m_brakediscs.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 20 })'>
+            <img src='@Url.Content("~/Uploads/m_brakepads.jpg")' />
+        </a>
+    </div>
+</body>
+</html>

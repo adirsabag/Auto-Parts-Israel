@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tuning</title>
+</head>
+<body>
+    <div>
+        <a href='@Url.Action("ProductPage", "Product", new { id = 5 })'>
+            <img src='@Url.Content("~/Uploads/m_safetyharnessesandaccessories.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 6 })'>
+            <img src='@Url.Content("~/Uploads/m_exhauststylingtips.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 7 })'>
+            <img src='@Url.Content("~/Uploads/m_wheelspacers.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 8 })'>
+            <img src='@Url.Content("~/Uploads/m_helmets.jpg")' />
+        </a>
+
+    </div>
+</body>
+</html>

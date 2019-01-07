@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Bulb</title>
+</head>
+<body>
+    <div>
+        <a href='@Url.Action("ProductPage", "Product", new { id = 16 })'>
+            <img src='@Url.Content("~/Uploads/nblaseryo_42664d.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 17 })'>
+            <img src='@Url.Content("~/Uploads/55010SKKM-0.jpg")' />
+        </a>
+    </div>
+</body>
+</html>

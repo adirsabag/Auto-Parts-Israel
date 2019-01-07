@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Suspension</title>
+</head>
+<body>
+    <div>
+        <a href='@Url.Action("ProductPage", "Product", new { id = 9 })'>
+            <img src='@Url.Content("~/Uploads/m_balljoints.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 10 })'>
+            <img src='@Url.Content("~/Uploads/m_shockabsorbers.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 11 })'>
+            <img src='@Url.Content("~/Uploads/m_suspensionkits.jpg")' />
+        </a>
+
+    </div>
+</body>
+</html>

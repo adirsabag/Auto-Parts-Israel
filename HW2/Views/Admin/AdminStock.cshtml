@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminStock</title>
+</head>
+<body>
+    <div>
+        <form action="@Url.Action("RenewStock", "Product")" method="post">
+            <br />
+            <h3>Renew stock</h3>
+            <br />
+            <input id="Submit1" type="submit" value="Renew" class="btn btn-primary btn-lg" />
+        </form>
+    </div>
+</body>
+</html>

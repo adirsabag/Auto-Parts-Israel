@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Interior</title>
+</head>
+<body>
+    <div>
+        <a href='@Url.Action("ProductPage", "Product", new { id = 12 })'>
+            <img src='@Url.Content("~/Uploads/m_pedalcovers.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 13 })'>
+            <img src='@Url.Content("~/Uploads/m_rubbercarmats.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 14 })'>
+            <img src='@Url.Content("~/Uploads/m_seatcovers.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 15 })'>
+            <img src='@Url.Content("~/Uploads/m_steeringwheelcovers.jpg")' />
+        </a>
+
+    </div>
+</body>
+</html>

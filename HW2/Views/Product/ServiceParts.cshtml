@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ServiceParts</title>
+</head>
+<body>
+
+    <div>
+        <a href='@Url.Action("ProductPage", "Product", new { id = 1 })'>
+            <img src='@Url.Content("~/Uploads/AirFilter.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 2 })'>
+            <img src='@Url.Content("~/Uploads/m_fuelfilters.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 3 })'>
+            <img src='@Url.Content("~/Uploads/m_oilfilters.jpg")' />
+        </a>
+
+        <a href='@Url.Action("ProductPage", "Product", new { id = 4 })'>
+            <img src='@Url.Content("~/Uploads/m_sparkplugs.jpg")' />
+        </a>
+
+    </div>
+
+</body>
+</html>

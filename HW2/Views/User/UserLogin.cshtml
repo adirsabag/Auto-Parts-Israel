@@ -1,0 +1,45 @@
+﻿@model HW2.Models.User
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserLogin</title>
+</head>
+<body>
+    <br />
+    <div class="input-group">
+        @using (Html.BeginForm("SubmitLogin", "User", FormMethod.Post))
+        {
+            <table cellpadding="5" cellspacing="3">
+                <tr>
+                    <th colspan="2" align="center">User Login</th>
+                </tr>
+                <tr>
+                    <td>Username: </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Username, new { @class = "input-group-text", placeholder = "Enter Username" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td>
+                        @Html.PasswordFor(m => m.Password, new { @class = "input-group-text", placeholder = "Enter Password" })
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Login" class="btn btn-primary btn-lg" /></td>
+                </tr>
+            </table>
+        }
+    </div>
+    @Html.Raw(TempData["wrong1"]) @*Wrong username or password message*@
+    @Html.Raw(TempData["wrong2"])
+    @Html.Raw(TempData["EmptyField"])
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Shop</title>
+</head>
+<body>
+    <a href='@Url.Action("ServiceParts", "Product")'>
+        <img src='@Url.Content("~/Uploads/serviceparts.jpg")' />
+    </a>
+
+    <a href='@Url.Action("Tuning", "Product")'>
+        <img src='@Url.Content("~/Uploads/tuning.jpg")' />
+    </a>
+
+    <a href='@Url.Action("Suspension", "Product")'>
+        <img src='@Url.Content("~/Uploads/suspensionandsteeringparts.jpg")' />
+    </a>
+
+    <a href='@Url.Action("Interior", "Product")'>
+        <img src='@Url.Content("~/Uploads/interioraccessories.jpg")' />
+    </a>
+
+    <a href='@Url.Action("Bulb", "Product")'>
+        <img src='@Url.Content("~/Uploads/bulbs.jpg")' />
+    </a>
+
+    <a href='@Url.Action("Brake", "Product")'>
+        <img src='@Url.Content("~/Uploads/brakeparts.jpg")' />
+    </a>
+    @Html.Raw(TempData["out"])
+</body>
+</html>

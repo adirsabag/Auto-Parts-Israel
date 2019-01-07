@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ProductPage</title>
+</head>
+<body>
+    <br />
+    <br />
+    Product name - @ViewBag.Pname
+    <br />
+    Product price - $@ViewBag.Pprice
+    <br />
+    Products left in stock - @ViewBag.Pstock
+    <br /><br /><br />
+    <p><a href="/Product/OrderProduct" class="btn btn-primary btn-lg">Place Order</a></p>
+</body>
+</html>

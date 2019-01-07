@@ -1,0 +1,55 @@
+﻿@model HW2.Models.Order
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OrderProduct</title>
+</head>
+<body>
+    <div class="input-group">
+        @using (Html.BeginForm("Buy", "Order", FormMethod.Post))
+        {
+            <table cellpadding="5" cellspacing="3">
+                <tr>
+                    <th colspan="2" align="center">Place Order</th>
+                </tr>
+                <tr>
+                    <td>Credit card number: </td>
+                    <td>
+                        @Html.PasswordFor(m => m.CreditCard, new { @class = "input-group-text", placeholder = "Enter Credit Card" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>3 safety digits: </td>
+                    <td>
+                        @Html.PasswordFor(m => m.SafetyDigits, new { @class = "input-group-text", placeholder = "Enter Digits" })
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>Address: </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Address, new { @class = "input-group-text", placeholder = "Enter Address" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>Phone number: </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "input-group-text", placeholder = "Enter Phone Number" })
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Order" class="btn btn-primary btn-lg" /></td>
+                </tr>
+            </table>
+        }
+    </div>
+    @Html.Raw(TempData["Digits"])
+</body>
+</html>

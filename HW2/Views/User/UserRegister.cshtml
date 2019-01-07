@@ -1,0 +1,65 @@
+﻿
+@model HW2.Models.User
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserRegister</title>
+</head>
+<body>
+    <br />
+    <div class="form-group">
+        @using (Html.BeginForm("SubmitRegister", "User", FormMethod.Post))
+        {
+            <table cellpadding="5" cellspacing="3">
+                <tr>
+                    <th colspan="2" align="center">User Register</th>
+                </tr>
+                <tr>
+                    <td>First Name: </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.FirstName, new { @class = "input-group-text", placeholder = "Enter First Name" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name: </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.LastName, new { @class = "input-group-text", placeholder = "Enter Last Name" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>Username: </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Username, new { @class = "input-group-text", placeholder = "Enter Username" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td>
+                        @Html.PasswordFor(m => m.Password, new { @class = "input-group-text", placeholder = "Enter Password" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "input-group-text", placeholder = "Enter Email" })
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Register" class="btn btn-primary btn-lg" /></td>
+                </tr>
+            </table>
+        }
+    </div>
+    @Html.Raw(TempData["UsernameExists"])
+    @Html.Raw(TempData["Pass"])
+    @Html.Raw(TempData["EmptyField"])
+</body>
+</html>

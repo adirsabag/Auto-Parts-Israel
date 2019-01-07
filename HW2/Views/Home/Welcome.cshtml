@@ -1,0 +1,78 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div class="jumbotron" style="background-image: url('../Uploads/Untitled.jpg'); background-size:cover">
+        <p><a href="/Product/Shop" class="btn btn-primary btn-lg">Shop</a></p>
+    </div>
+    <h1>Auto Parts Israel</h1>
+    <br />
+    <br />
+
+    <a href='@Url.Action("ServiceParts", "Product")'>
+        <img src='@Url.Content("~/Uploads/serviceparts.jpg")' />
+    </a>
+
+    <a href='@Url.Action("Tuning", "Product")'>
+        <img src='@Url.Content("~/Uploads/tuning.jpg")' />
+    </a>
+
+    <a href='@Url.Action("Suspension", "Product")'>
+        <img src='@Url.Content("~/Uploads/suspensionandsteeringparts.jpg")' />
+    </a>
+
+    <a href='@Url.Action("Interior", "Product")'>
+        <img src='@Url.Content("~/Uploads/interioraccessories.jpg")' />
+    </a>
+
+    <a href='@Url.Action("Bulb", "Product")'>
+        <img src='@Url.Content("~/Uploads/bulbs.jpg")' />
+    </a>
+
+    <a href='@Url.Action("Brake", "Product")'>
+        <img src='@Url.Content("~/Uploads/brakeparts.jpg")' />
+    </a>
+
+    <br /><br /><br /><br />
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <h2>Free Shipping</h2>
+            <p>
+                On orders $100 or greater, to any place on the globe.
+                <br />
+                <img src="@Url.Content("~/uploads/free.jpg")" alt="IMAGES" height=100 width=130 />
+            </p>
+            <p><a class="btn btn-default" href="/Home/Shipping">Read more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Returns</h2>
+            <p>
+                We offer 30-days return on all our products. Damaged or broken items won't be accepted.
+                <br />
+                <img src="@Url.Content("~/uploads/returns.png")" alt="IMAGES" height=100 width=150 />
+            </p>
+            <p><a class="btn btn-default" href="/Home/Returns">Read more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Payment Methods</h2>
+            <p>
+                Visa, MasterCard and American Express.
+                <br /><br /><br />
+                <img src="@Url.Content("~/uploads/visa.png")" alt="IMAGES" height=100 width=400 />
+            </p>
+
+        </div>
+    </div>
+</body>
+</html>

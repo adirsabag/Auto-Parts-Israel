@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminPriv</title>
+</head>
+<body>
+    <div>
+
+        <form action="@Url.Action("RenewStock", "Product")" method="post">
+            <br />
+            <h3>Renew stock</h3>
+            <input id="Submit1" type="submit" value="Renew" class="btn btn-primary btn-lg" />
+        </form>
+
+        <form action="@Url.Action("UserTable", "User")" method="post">
+            <br />
+            <h3>Users table</h3>
+            <input id="Submit1" type="submit" value="Table" class="btn btn-primary btn-lg" />
+        </form>
+
+        <form action="@Url.Action("UserTableByJson", "User")" method="post">
+            <br />
+            <h3>Users table (by Json)</h3>
+            <input id="Submit1" type="submit" value="Table" class="btn btn-primary btn-lg" />
+        </form>
+
+        <form action="@Url.Action("ProductsTable", "Product")" method="post">
+            <br />
+            <h3>Products table</h3>
+            <input id="Submit1" type="submit" value="Table" class="btn btn-primary btn-lg" />
+        </form>
+
+    </div>
+</body>
+</html>
