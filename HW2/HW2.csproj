@@ -282,8 +282,8 @@
     <Content Include="Views\Admin\AdminPriv.cshtml" />
     <Content Include="Views\Admin\AdminStock.cshtml" />
     <Content Include="Views\User\UserTable.cshtml" />
-    <Content Include="Views\User\UserTableByJson.cshtml" />
     <Content Include="Views\Product\ProductsTable.cshtml" />
+    <Content Include="Views\User\Suggest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

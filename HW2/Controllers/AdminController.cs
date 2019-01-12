@@ -88,7 +88,7 @@ namespace HW2.Controllers
                         dal.Admins.Add(ad);
                         dal.SaveChanges();
 
-                        return RedirectToAction("Welcome", "Home");
+                        return View("AdminRegister", ad);
                     }
                     else
                     {
@@ -166,6 +166,14 @@ namespace HW2.Controllers
         public ActionResult AdminPriv()
         {
             return View();
+        }
+
+        public ActionResult GetAdminsByJson()
+        {
+
+            AdminDal dal = new AdminDal();
+            List<Admin> objAdmins = dal.Admins.ToList<Admin>();
+            return Json(objAdmins, JsonRequestBehavior.AllowGet);
         }
     }
 }

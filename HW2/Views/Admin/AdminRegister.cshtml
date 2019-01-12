@@ -56,17 +56,59 @@
                         @Html.PasswordFor(m => m.AdminCode, new { @class = "input-group-text", placeholder = "Enter Admin Code" })
                     </td>
                 </tr>
-                <tr>
-                    <td></td> 
-                    <td><input type="submit" value="Register" class="btn btn-primary btn-lg" /></td>
-                </tr>
             </table>
+            <button type="submit" class="btn btn-primary btn-lg">Register</button>
+        }
+        @section Scripts{
+            @Scripts.Render("~/bundles/jqueryval")
         }
     </div>
     @Html.Raw(TempData["UsernameExists"])
     @Html.Raw(TempData["AdmCode"])
     @Html.Raw(TempData["Pass"])
     @Html.Raw(TempData["EmptyField"])
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <table id="AdminsTable">
+        <thead>
+            <tr>
+                <td>
+                    Username
+                </td>
+                <td>
+                    First Name
+                </td>
+                <td>
+                    Last Name
+                </td>
+                <td>
+                    Email
+                </td>
+            </tr>
+        </thead>
+        <tbody id="tablebody"></tbody>
+    </table>
+    <script language="javascript">
+        $("#status").text("Loading...")
+
+        $.get("GetAdminsByJson", null, BindData);
+        function BindData(admins) {
+            var tbl = $("#AdminsTable")
+
+            for (k = 0; k < admins.length; k++) {
+                var newRow = "<tr>" +
+                    "<td>" + admins[k].AdminUsername + "</td>" +
+                    "<td>" + admins[k].AdminFirstName + "</td>" +
+                    "<td>" + admins[k].AdminLastName + "</td>" +
+                    "<td>" + admins[k].AdminEmail + "</td>" +
+                    "</tr>";
+                tbl.append(newRow)
+            }
+            $("#status").text("")
+
+        }
+
+    </script>
 </body>
 </html>
 

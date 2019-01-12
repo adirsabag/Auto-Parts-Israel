@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = null;
+}
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+
+<script src="~/Scripts/jquery.validate.js"></script>
+
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Suggest</title>
+</head>
+<body>
+    <div>
+
+        <table class="EmpTbl" id="empTable">
+
+            <tr>
+
+                <td><b> Employee ID </b></td>
+
+                <td><b> First Name </b></td>
+
+                <td><b> Last Name </b></td>
+
+            </tr>
+
+            <tr></tr>
+
+
+
+        </table>
+
+        <script language="javascript">
+            $.ajax({
+                type: "POST",
+                url: '/User/Suggest',
+                // data: data,send data to controller from here
+                dataType: 'json',
+                //processData: false,
+                success: function (msg) {
+                    var tbl = $("#EmpTbl");
+
+                    for (i = 0; i < Employees.length; i++) {
+                        var newRow = "<tr>" +
+
+                            "<td>" + i + "<\td>" +
+
+                            "<td>" + Employees[i].FirstName + "<\td>" +
+
+                            "<td>" + Employees[i].LastName + "<\td>" +
+
+                            "</tr>"
+
+                        tbl.append(newRow);
+                    }
+                }, error: function (error) {
+                    console.log(error.responseText);
+                }
+            });
+        </script>
+    </div>
+
+</body>
+</html>

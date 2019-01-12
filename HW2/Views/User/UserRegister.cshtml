@@ -52,11 +52,15 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td><input type="submit" value="Register" class="btn btn-primary btn-lg" /></td>
                 </tr>
             </table>
+
         }
+        @section Scripts{
+            @Scripts.Render("~/bundles/jqueryval")
+            }
+
     </div>
     @Html.Raw(TempData["UsernameExists"])
     @Html.Raw(TempData["Pass"])

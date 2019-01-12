@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.Mvc;
 using HW2.Dal;
 using System.Web.Helpers;
+using System.Threading;
+using HW2.ModelView;
 
 namespace HW2.Controllers
 {
@@ -152,10 +154,5 @@ namespace HW2.Controllers
             return View(dalUs.Users.ToList());
         }
 
-        public ActionResult UserTableByJson()
-        {
-            List<User> lst = dalUs.Users.ToList<User>();
-            return Json(lst, JsonRequestBehavior.AllowGet);
-        }
     }
 }
